@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.container {
+  margin: auto;
+  max-width: 1410px;
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+}
+
+main img {
+  max-width: 950px;
+  display: block;
+  margin: 25px auto;
+}
+
+.centered {
+  font-size: 50px;
+  color: rgba(113, 156, 225, 0.764);
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background: #252525;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.25;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/******************/
+
+header {
+  padding-top: 50px;
+}
+
+.logo {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+nav ul li {
+  margin: 0 19px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+
+}
+
+nav ul a {
+  color: white;
+  display: block;
+  padding: 5px 10px;
+}
+
+.header-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/******************/
+
+main {
+  min-height: calc(100vh - 255px);
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  padding: 40px;
+}
+
+form input {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  color: rgb(252, 252, 252);
+  border: 2px solid rgb(173, 138, 26);
+  background: transparent;
+  padding: 12px 21px;
+}
+
+a:hover {
+  color: yellow;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: yellow;
+  transition: all 0.3s;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 150px;
+  font-size: 23px;
+}
+
+.container button {
+  padding: 10px 157px;
+  margin-bottom: 40px;
+  border-radius: 6px;
+  margin-left: 0px;
+  margin-bottom: 160px;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+img {
+  padding: 5px;
+}
+
+/******************/
+
+footer {
+  padding-bottom: 50px;
+}
+
+
+.footer_row {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.social_list {
+  display: flex;
+}
+
+li {
+  margin: 2px;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  /* display: none; */
+  z-index: 3;
+}
+
+/* Стили для бургер-меню */
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.burger-menu_button {
+  position: fixed;
+  top: 37px;
+  left: 15px;
+  z-index: 30;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #655e5e;
+}
+
+.burger-menu_button:hover .burger-menu_lines {
+  filter: brightness(0.7);
+}
+
+.burger-menu_lines,
+.burger-menu_lines::after,
+.burger-menu_lines::before {
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: #fff;
+}
+
+.burger-menu_lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger-menu_lines::before {
+  content: '';
+  top: -12px;
+}
+
+.burger-menu_lines::after {
+  content: '';
+  top: 12px;
+}
+
+.burger-menu_active .burger-menu_lines {
+  background-color: transparent;
+}
+
+.burger-menu_active .burger-menu_lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu_lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+  padding-top: 30px;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #2a2a2a;
+  overflow-y: auto;
+  left: -100%;
+  width: 80%;
+}
+
+.burger-menu_active .burger-menu_nav {
+  left: 0;
+}
+
+.burger-menu_link {
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.burger-menu_link:hover {
+  filter: brightness(0.7);
+}
+
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.burger-menu_active .burger-menu_overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Стили для счётчика на 8 марта */
+.wrapper {
+  position: relative;
+  display: block;
+}
+
+.march {
+  font-size: 25px;
+  text-align: left;
+  position: absolute;
+  top: auto;
+  color: rgb(230, 53, 207);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(12%, -610%);
+}
+
+.wrapper h2 {
+  font-size: 25px;
+  padding: 10px;
+  color: white;
+}
+
+.wrapper .count_timer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  transform: translate(-0.5%, -240%);
+}
+
+.wrapper img {
+  width: 45%;
+  padding: 20px;
+}
+
+.count_timer .timer {
+  padding: 4px;
+  margin: 3px;
+  background: rgba(189, 144, 200, 0.955);
+  transform: translate(55%, -80%);
+}
+
+.timer p {
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+/* Стили для блога */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+main {
+  margin: auto;
+  max-width: 900px;
+}
+
+#all-users {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#all-users span {
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#result {
+  margin-bottom: 100px;
+}
+
+#result table {
+  display: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+table td:first-child {
+  width: 30%;
+}
+
+.show-btn {
+  cursor: pointer;
+}
+
+.show-btn:hover {
+  color: purple;
+}
+
+#posts {
+  margin-bottom: 50px;
+}
+
+#posts h3 {
+  color: rgb(255, 255, 255);
+}
+
+#posts span {
+  margin: auto;
+}
+
+
+/* Стили для Драг-н-дропа */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container_games {
+  width: 90%;
+  max-width: 72.9em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 47%;
+  left: 50%;
+  border-radius: 0.8em;
+  max-height: 98%;
+  padding: em;
+  background-color: #f1f0f0;
+}
+
+h3 {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 2em auto;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.8em;
+  color: #010c39;
+}
+
+.draggable-objects,
+.drop-points {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.draggable-image {
+  width: 8em;
+  height: 8em;
+  cursor: move;
+}
+
+.draggable-image img {
+  width: 250px;
+  height: 250px;
+  filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.547));
+  border-radius: 0.8em;
+}
+
+.container_games img {
+  width: 155px;
+  height: 155px;
+  border-radius: 0.8em;
+  margin-top: 12px;
+}
+
+.animals {
+  width: 10em;
+  height: 11em;
+  display: grid;
+  place-items: center;
+  border: 0.25em solid #010c39;
+  border-radius: 0.8em;
+  font-weight: bold;
+  font-size: 16.5px;
+  text-align: center;
+  color: black;
+}
+
+.dropped {
+  padding: 0;
+  background-color: #cef89e;
+}
+
+.controls-container {
+  width: 95%;
+  max-width: 73em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 47%;
+  left: 50%;
+  border-radius: 0.8em;
+  background-color: #5372ef;
+  max-height: 98%;
+  padding: 8.7em;
+}
+
+.controls-container button {
+  font-size: 1.12em;
+  padding: 0.8em 1em;
+  border-radius: 0.2em;
+  border: none;
+  outline: none;
+  color: #010c39;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  margin-bottom: 100px;
+  display: flex;
+  transform: translate(390%, -50%);
+}
+
+button {
+  padding: 10px 156px;
+  margin-bottom: 40px;
+  border-radius: 6px;
+  margin-left: -230px;
+  margin-bottom: 160px;
+}
+
+.controls-container p {
+  color: #ffffff;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.container_games h2 {
+  text-align: center;
+  color: #010c39;
+  padding-top: 25px;
+}
